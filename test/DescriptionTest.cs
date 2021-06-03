@@ -9,18 +9,18 @@ namespace Marc.test
 {
     [TestFixture]
     [Parallelizable]
-    class ProfileTest : CommonDriver
+    class DescriptionTest : CommonDriver
     {
         [Test]
-        public void EditProfile()
+        public void InputDescription()
         {
             // home page object
             HomePage homepage = new HomePage(driver);
             homepage.NavigatProfilePage();
 
             // profile page object
-            ProfilePage profilePage = new ProfilePage(driver);
-            profilePage.EditProfile(driver);
+            DescriptionPage descriptionPage = new DescriptionPage(driver);
+            descriptionPage.descriptonStes(driver);
 
         }
     }

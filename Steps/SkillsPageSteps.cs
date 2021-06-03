@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.IE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,8 @@ namespace Marc.Steps
 
         public SkillsPageSteps()
         {
-            driver = new ChromeDriver();
+              driver = new ChromeDriver();
+          //  driver = new InternetExplorerDriver();
             loginPage = new LoginPage(driver);
             skillsPage = new SkillsPage(driver);
 
@@ -63,12 +65,21 @@ namespace Marc.Steps
             Console.WriteLine("I click the add new skills button");
         }
 
-        [When(@"I enter the new skills")]
-        public void WhenIEnterTheNewSkills()
+
+        [When(@"I enter the new (.*)")]
+        public void WhenIEnterTheNew(string skills)
         {
-            skillsPage.enetrNewSkills();
+            skillsPage.enetrNewSkills(skills);
             Console.WriteLine("I enter the new skills");
         }
+
+
+        //[When(@"I enter the new skills")]
+        //public void WhenIEnterTheNewSkills()
+        //{
+        //    skillsPage.enetrNewSkills();
+        //    Console.WriteLine("I enter the new skills");
+        //}
 
         [When(@"I click on dropdown to select the new skills")]
         public void WhenIClickOnDropdownToSelectTheNewSkills()
@@ -107,12 +118,21 @@ namespace Marc.Steps
             Console.WriteLine("I click the edit icon to update skills");
         }
 
-        [When(@"I update the new skills")]
-        public void WhenIUpdateTheNewSkills()
+
+        [When(@"I update the new (.*)")]
+        public void WhenIUpdateTheNew(string updateSkills)
         {
-            skillsPage.iUpdateNewSkills();
+            skillsPage.iUpdateNewSkills(updateSkills);
             Console.WriteLine("I update the new skills");
         }
+
+
+        //[When(@"I update the new skills")]
+        //public void WhenIUpdateTheNewSkills()
+        //{
+        //    skillsPage.iUpdateNewSkills();
+        //    Console.WriteLine("I update the new skills");
+        //}
 
         [When(@"I click on dropdown to update the new skills")]
         public void WhenIClickOnDropdownToUpdateTheNewSkills()

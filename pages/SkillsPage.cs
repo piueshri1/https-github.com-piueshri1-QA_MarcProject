@@ -15,8 +15,6 @@ namespace Marc.pages
         private IWebElement iAMatSkillPage => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.top.attached.tabular.menu > a:nth-child(2)"));
         private IWebElement clickSkills => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.top.attached.tabular.menu > a:nth-child(2)"));
         private IWebElement addNewSkills => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > thead > tr > th.right.aligned > div"));
-
-  
         private IWebElement editNewSkills => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > div > div:nth-child(1) > input[type=text]"));
         private IWebElement cselectSkillsDropDown => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > div > div:nth-child(2) > select > option:nth-child(1)"));
         private IWebElement selectedSkills => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > div > div:nth-child(2) > select > option:nth-child(2)"));
@@ -28,8 +26,7 @@ namespace Marc.pages
         private IWebElement clickUpdateSkillsButton => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody > tr > td > div > span > input.ui.teal.button"));
         private IWebElement deleteEditedSkills => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody:nth-child(2) > tr > td.right.aligned > span:nth-child(2) > i"));
         private IWebElement iAmAtSkillsIcons => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody > tr > td.right.aligned > span:nth-child(1) > i"));
-        private IWebElement validateSkillsUpdated => driver.FindElement(By.CssSelector("#account-profile-section"));
-        private IWebElement validateSkillsDeleted => driver.FindElement(By.CssSelector("#account-profile-section"));
+        
 
 
         public SkillsPage(IWebDriver driver)
@@ -42,19 +39,19 @@ namespace Marc.pages
             // skills page.....
 
             // on click skills
-            //   Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.top.attached.tabular.menu > a:nth-child(2)",2);
+             Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.top.attached.tabular.menu > a:nth-child(2)", 5);
 
             clickSkills.Click();
 
 
             // add skills
             addNewSkills.Click();
-            Thread.Sleep(1000);
+           
 
 
             // edit new sckills
             editNewSkills.SendKeys("softwareTesting");
-            //Thread.Sleep(1000);
+           
 
 
 
@@ -63,12 +60,12 @@ namespace Marc.pages
 
             // dropdon fo selected skills
             selectedSkills.Click();
-            Thread.Sleep(1000);
+        
 
             // add selected skills
 
             addSelectedSkills.Click();
-            Thread.Sleep(1000);
+     
 
 
 
@@ -80,17 +77,17 @@ namespace Marc.pages
         {
             //upadate add skills
 
-            //   Wait.ElementToBeClickable(driver,"CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody > tr > td.right.aligned > span:nth-child(1) > i",2);
+               Wait.ElementExist(driver,"CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody > tr > td.right.aligned > span:nth-child(1) > i",5);
 
             // upadate skills
 
             clickUpdateSkills.Click();
-            Thread.Sleep(1000);
+           
 
 
             updateNewSkills.Clear();
             updateNewSkills.SendKeys("specflow");
-            //    Thread.Sleep(1000);
+          
 
 
             // dropdown for update new skills
@@ -100,132 +97,147 @@ namespace Marc.pages
 
             updateSkills.Clear();
             updateSkills.Click();
-            Thread.Sleep(1000);
+          
 
 
             // clock upadate skills button
 
             clickUpdateSkillsButton.Click();
-            Thread.Sleep(2000);
+          
         }
         public void DeleteSkills()
         {
             // delete edited skills
 
 
-            //  Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody:nth-child(2) > tr > td.right.aligned > span:nth-child(2) > i",2);
+              Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody:nth-child(2) > tr > td.right.aligned > span:nth-child(2) > i",5);
 
             deleteEditedSkills.Click();
-            Thread.Sleep(1000);
+          
 
 
         }
 
 
 
-        // method for  i am at skills page  using selenium with BDD specflow..........
-        // method for   click add new   skills using selenium with BDD specflow...........
-        // method for  add new   skills  using selenium with BDD specflow...........
-        // method for   click on dropdown to  chhose   skills   using selenium with BDD specflow...........
-        // method for   select  new   skills from dropdown  using selenium with BDD specflow...........
-        // method for   click add  skills  using selenium with BDD specflow...........
-        // method for  validate new   skills added  using selenium with BDD specflow..........
-        // method for   click edit icon to update skills  using selenium with BDD specflow...........
-        // method for update new   skills using selenium with BDD specflow...........
-        // method for click dropdown to update skills using selenium with BDD specflow...........
-        // method for update ne w skills from dropdown skills  using selenium with BDD specflow...........
-        // method for   click to update new skills  using selenium with BDD specflow...........
-        // method for validate  skills updated  using selenium with BDD specflow...........
+        
 
-        // method for   click delete icon to delete skills  using selenium with BDD specflow...........
-
-        // method for validate skills deleted using selenium with BDD specflow...........
-
+      // method for  i am at skills page  using selenium with BDD specflow..........
 
         public bool iAmAtSkillsPage()
         {
+            Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.top.attached.tabular.menu > a:nth-child(2)", 5);
+
             return iAMatSkillPage.Displayed;
         }
+
 
         public void iClickTheSkillsPage()
         {
             clickSkills.Click();
-            Thread.Sleep(1000);
+           
 
         }
 
-        public void clickAddNewSkillsButton()
+
+       // method for   click add new   skills using selenium with BDD specflow...........
+         public void clickAddNewSkillsButton()
         {
             addNewSkills.Click();
-            Thread.Sleep(1000);
+           
         }
 
-        public void enetrNewSkills()
+
+       // method for  add new   skills  using selenium with BDD specflow...........
+        public void enetrNewSkills(string skillsValue)
         {
-            editNewSkills.SendKeys("softwareTesting");
-            //Thread.Sleep(1000);
+            editNewSkills.SendKeys(skillsValue);
+           
         }
 
 
-        public void iClickOnDropdownToSelectTheNewSkills()
+
+      // method for   click on dropdown to  chhose   skills   using selenium with BDD specflow...........
+         public void iClickOnDropdownToSelectTheNewSkills()
         {
             cselectSkillsDropDown.Click();
         }
 
+
+      // method for   select  new   skills from dropdown  using selenium with BDD specflow...........
         public void WhenISelectNewSkillsFronDropdown()
         {
             selectedSkills.Click();
-            Thread.Sleep(1000);
+           
         }
 
 
+      // method for   click add  skills  using selenium with BDD specflow...........
         public void ClickTheAddButton()
         {
             addSelectedSkills.Click();
-            Thread.Sleep(2000);
+          
 
         }
 
-        public void clickOnEditIconToUpdate()
+
+     // method for   click edit icon to update skills  using selenium with BDD specflow...........
+
+      public void clickOnEditIconToUpdate()
+  
         {
+            Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody > tr > td.right.aligned > span:nth-child(1) > i", 5);
+
             clickUpdateSkills.Click();
-            Thread.Sleep(2000);
+           
         }
 
-        public void iUpdateNewSkills()
+
+       // method for update new   skills using selenium with BDD specflow...........
+        public void iUpdateNewSkills(string updateSkillsValue)
         {
-           // updateNewSkills.Clear();
-            updateNewSkills.SendKeys("specflow");
+            updateNewSkills.Clear();
+            updateNewSkills.SendKeys(updateSkillsValue);
         }
 
+
+        // method for click dropdown to update skills using selenium with BDD specflow...........
         public void clickOnDropdownToUpdateTheNewSkills()
         {
             dropDownForUpdateSkills.Click();
         }
 
+
+       // method for update ne w skills from dropdown skills  using selenium with BDD specflow...........
         public void selectToUpdateNewSkillsFronDropdown()
         {
            // updateSkills.Clear();
             updateSkills.Click();
-            Thread.Sleep(1000);
+          
         }
 
+
+        // method for   click to update new skills  using selenium with BDD specflow...........
         public void clickToUpdateSkillsButton()
         {
             clickUpdateSkillsButton.Click();
-            Thread.Sleep(2000);
+          
         }
+
+       // method for validate i am at skills  icons  using selenium with BDD specflow...........
         public bool atSkillsIcon()
         {
             return iAmAtSkillsIcons.Displayed;
         }
 
-
+        // method for   click delete icon to delete skills  using selenium with BDD specflow...........
 
         public void clickTheDeleteIconToSkills()
         {
+            Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody:nth-child(2) > tr > td.right.aligned > span:nth-child(2) > i", 5);
+
             deleteEditedSkills.Click();
-            Thread.Sleep(1000);
+          
         }
 
 

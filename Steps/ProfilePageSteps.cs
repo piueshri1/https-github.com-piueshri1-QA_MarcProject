@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.IE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,8 @@ namespace Marc.Steps
 
         public ProfilePageSteps()
         {
-            driver = new ChromeDriver();
+             driver = new ChromeDriver();
+          //  driver = new InternetExplorerDriver();
             loginPage = new LoginPage(driver);
             profilePage = new ProfilePage(driver);
             
@@ -47,28 +49,29 @@ namespace Marc.Steps
         [Given(@"I am at the Profile page")]
         public void GivenIAmAtTheProfilePage()
         {
-            profilePage.iAmAtProfilePage();
+            profilePage.IAmAtProfilePage();
             Console.WriteLine("I am at the Profile page");
         }
 
         [When(@"I click on profile")]
         public void WhenIClickOnProfile()
         {
-            profilePage.iclickOnProfileName();
+            profilePage.IclickOnProfileName();
             Console.WriteLine("I click on profile");
         }
 
-        [When(@"I enter the new name")]
-        public void WhenIEnterTheNewName()
+
+        [When(@"I enter new firstname (.*)")]
+        public void WhenIEnterNewFirstname(string FirstName)
         {
-            profilePage.enterFirstName();
+            profilePage.EnterFirstName(FirstName);
             Console.WriteLine("I enter the new name");
         }
 
-        [When(@"I enter the new serName")]
-        public void WhenIEnterTheNewSerName()
+        [When(@"I enter new lastname (.*)")]
+        public void WhenIEnterNewLastname(string LastName)
         {
-            profilePage.enterLastName();
+            profilePage.EnterLastName(LastName);
             Console.WriteLine("I enter the new serName");
         }
 
@@ -82,7 +85,7 @@ namespace Marc.Steps
         [Then(@"Validate that profile  is added")]
         public void ThenValidateThatProfileIsAdded()
         {
-            bool isEditted = profilePage.validateProfileIsEdited();
+            bool isEditted = profilePage.ValidateProfileIsEdited();
             Console.WriteLine("Validate that profile  is added");
             Assert.IsTrue(isEditted);
         }

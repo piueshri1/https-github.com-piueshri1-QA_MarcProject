@@ -16,7 +16,6 @@ namespace Marc.pages
         private IWebElement password => driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input"));
         private IWebElement loginButton => driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
         private IWebElement marcLogo => driver.FindElement(By.CssSelector("#account-profile-section > div > div.ui.secondary.menu > a"));
-
         private IWebElement loginError => driver.FindElement(By.CssSelector("body > div.ui.page.modals.dimmer.transition.visible.active"));
 
 
@@ -39,11 +38,10 @@ namespace Marc.pages
             driver.Navigate().GoToUrl("http://localhost:5000/");
 
             driver.Manage().Window.Maximize();
-            Thread.Sleep(500);
-
+      
             try
             {
-              //  Wait.ElementExist(driver, "XPath", " #home > div > div > div.ui.secondary.menu.inverted > div > a", 5);
+                Wait.ElementExist(driver, "CssSelector", "#home > div > div > div.ui.secondary.menu.inverted > div > a", 5);
                 // click on signIn link
            
                 signInLink.Click();
@@ -60,8 +58,10 @@ namespace Marc.pages
 
 
                 // login button
+             
+
                 loginButton.Click();
-                Thread.Sleep(2000);
+            
               
             }
             catch(Exception msg)
@@ -73,7 +73,7 @@ namespace Marc.pages
             // verify login successfully
 
 
-         //   Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > div.ui.secondary.menu > a",2);
+            Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > div.ui.secondary.menu > a", 2);
             if (marcLogo.Text == "Mars Logo")
 
             {
@@ -102,7 +102,7 @@ namespace Marc.pages
         // method for  valiadating login not successfully  with selenium using BDD specflow...........
         public bool validateNotLoginSuccessfuly()
         {
-            Thread.Sleep(1000);
+          
             return loginError.Displayed;
             
 
@@ -114,13 +114,14 @@ namespace Marc.pages
         {
             // login button
             loginButton.Click();
-            Thread.Sleep(2000);
+          
         }
 
 
         // method for  valiadating login  successfully  using selenium  with BDD specflow...........
         public bool  validateLoginSuccessfully()
         {
+            Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > div.ui.secondary.menu > a", 5);
             if (marcLogo.Text == "Mars Logo")
 
             {
@@ -133,11 +134,11 @@ namespace Marc.pages
 
             {
                 Console.WriteLine("login fail,test fail");
+               
+               //  Assert.Fail("login fail,test fail");
                 return false;
-                // Assert.Fail("login fail,test fail");
-
             }
-            Thread.Sleep(2000);
+           
 
 
         }
@@ -169,7 +170,7 @@ namespace Marc.pages
             enterEmailIdAndPasswordRefactor(emailIdValue, passwordValue);
             clickLoginButton();
             validateLoginSuccessfully();
-            Thread.Sleep(2000);
+          
         }
 
         // method for lunching application using selenium  with BDD specflow...........
@@ -179,7 +180,7 @@ namespace Marc.pages
             driver.Navigate().GoToUrl("http://localhost:5000/");
 
             driver.Manage().Window.Maximize();
-            Thread.Sleep(1000);
+           
         }
 
 
@@ -189,12 +190,12 @@ namespace Marc.pages
         {
             try
             {
-                //  Wait.ElementExist(driver, "XPath", " #home > div > div > div.ui.secondary.menu.inverted > div > a", 5);
+                Wait.ElementExist(driver, "CssSelector", "#home > div > div > div.ui.secondary.menu.inverted > div > a", 5);
 
 
 
                 // identify emailId 
-                if(emailIdValue != null)
+                if (emailIdValue != null)
                 {
                     Console.WriteLine("enter emailId =" + emailIdValue);
                     emailId.SendKeys(emailIdValue);

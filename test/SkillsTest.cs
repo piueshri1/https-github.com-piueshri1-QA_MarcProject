@@ -13,7 +13,7 @@ namespace Marc.test
     class SkillsTest : CommonDriver
     {
    
-        [Test]
+        [Test,Order(0)]
         public void CreateSkills()
         {
 
@@ -28,7 +28,7 @@ namespace Marc.test
 
         }
 
-        [Test]
+        [Test,Order(1)]
         public void UpdateSkills()
         {
             // home page object
@@ -39,7 +39,7 @@ namespace Marc.test
             SkillsPage skillsPage = new SkillsPage(driver);
             skillsPage.AddNewSkills(driver);
         }
-        [Test]
+        [Test,Order(2)]
         public void DeleteSkills()
         {
             // home page object

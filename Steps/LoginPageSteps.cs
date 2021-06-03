@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.IE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,8 @@ namespace Marc.Steps
         private LoginPage loginPage;
          public LoginPageSteps()
         {
-            driver = new ChromeDriver();
+             driver = new ChromeDriver();
+          //  driver = new InternetExplorerDriver();
             loginPage = new LoginPage(driver);
         }
 

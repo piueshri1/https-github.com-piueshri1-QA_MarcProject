@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.IE;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,7 +20,8 @@ namespace Marc.utilities
         public void Loginproject()
         {
             Console.WriteLine("Hello World!");
-            driver = new ChromeDriver();
+             driver = new ChromeDriver();
+           // driver = new InternetExplorerDriver();
 
             // login object
 

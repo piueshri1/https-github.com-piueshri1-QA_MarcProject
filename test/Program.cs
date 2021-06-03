@@ -12,57 +12,9 @@ namespace Marc
    [Parallelizable]
     class Program : CommonDriver
     {
-      //static void Main(string[] args)
-      //{
-           
+   
 
-
-            // home page object
-           //omePage homepage = new HomePage();
-          //homepage.navigatProfilePage(driver);
-
-            // description object
-          //DescriptionPage descriptionPage = new DescriptionPage();
-           //escriptionPage.descriptonStes(driver);
-
-            // language object
-           //anguagePage languagePage = new LanguagePage();
-           //anguagePage.languageSteps(driver);
-
-            // skills object
-
-           //killsPage skillsPage = new SkillsPage();
-          //skillsPage.skillsSteps(driver);
-
-
-            // object for profilePage..
-
-            // ProfilePage profilePage = new ProfilePage();
-            // profilePage.navigateDescriptionPage(driver);
-            // profilePage.navigateDescriptionPage(driver);
-            // profilePage.navigateSkillsPage(driver);
-
-
-            
-          
-      //}
-        
-
-      //  [SetUp]
-     //   public void Loginproject()
-       //     {
-         //   Console.WriteLine("Hello World!");
-           // driver = new ChromeDriver();
-
-            // login object
-
-           // LoginPage loginPage = new LoginPage();
-          //  loginPage.LoginSteps(driver);
-
-       // }
-
-
-        [Test]
+        [Test,Order(0)]
         public void CreateLnguage()
         {
 
@@ -76,7 +28,7 @@ namespace Marc
 
         }
 
-        [Test]
+        [Test,Order(1)]
         public void UpdateLanguage()
         {
             // home page object
@@ -88,7 +40,7 @@ namespace Marc
             languagePage.UpdateLanguage(driver);
 
         }
-        [Test]
+        [Test,Order(2)]
         public void DeleteLanguage()
         {
             // home page object

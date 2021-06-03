@@ -22,17 +22,15 @@ namespace Marc.pages
         public void NavigatProfilePage()
         {
 
-         //  Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > div.ui.secondary.menu > div.right.item > div > span > div > a:nth-child(1)",1);
+              Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > div.ui.secondary.menu > div.right.item > div > span", 5);
 
-          //  IWebElement dropDown = driver.FindElement(By.CssSelector("#account-profile-section > div > div.ui.secondary.menu > div.right.item > div > span"));
-            
-      //      dropDown.Click();
-         //  Thread.Sleep(1000);
-            
+            dropDown.Click();
+            //  Thread.Sleep(1000);
 
-       //     IWebElement goToProfilePage = driver.FindElement(By.CssSelector("#account-profile-section > div > div.ui.secondary.menu > div.right.item > div > span > div > a:nth-child(1)"));
-           goToProfilePage.Click();
-           Thread.Sleep(2000);
+            Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > div.ui.secondary.menu > div.right.item > div > span > div > a:nth-child(1)", 2);
+
+            goToProfilePage.Click();
+          // Thread.Sleep(2000);
 
 
         }

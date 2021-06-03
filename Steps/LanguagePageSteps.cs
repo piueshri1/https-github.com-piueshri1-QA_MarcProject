@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.IE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,8 @@ namespace Marc.Steps
 
         public LanguagePageSteps()
         {
-            driver = new ChromeDriver();
+              driver = new ChromeDriver();
+           // driver = new InternetExplorerDriver();
             loginPage = new LoginPage(driver);
             languagePage = new LanguagePage(driver);
         }
@@ -62,12 +64,21 @@ namespace Marc.Steps
             Console.WriteLine("I click the add new Language button");
         }
 
-        [When(@"I enter the new Language")]
-        public void WhenIEnterTheNewLanguage()
+
+        [When(@"I enter  new (.*)")]
+        public void WhenIEnterNew(string Language)
         {
-            languagePage.iEnterTheNewLanguage();
+            languagePage.iEnterTheNewLanguage(Language);
             Console.WriteLine("I enter the new Language");
         }
+
+
+        //[When(@"I enter the new Language")]
+        //public void WhenIEnterTheNewLanguage()
+        //{
+        //    languagePage.iEnterTheNewLanguage();
+        //    Console.WriteLine("I enter the new Language");
+        //}
 
         [When(@"I click on dropdown to select the new Language")]
         public void WhenIClickOnDropdownToSelectTheNewLanguage()
@@ -105,12 +116,21 @@ namespace Marc.Steps
             Console.WriteLine("I click the edit icon to update Language");
         }
 
-        [When(@"I update the new Language")]
-        public void WhenIUpdateTheNewLanguage()
+
+        [When(@"I update new (.*)")]
+        public void WhenIUpdateNew(string updateLanguage)
         {
-            languagePage.updateTheNewLanguage();
+            languagePage.updateTheNewLanguage(updateLanguage);
             Console.WriteLine("I update the new Language");
         }
+
+
+        //[When(@"I update the new Language")]
+        //public void WhenIUpdateTheNewLanguage()
+        //{
+        //    languagePage.updateTheNewLanguage();
+        //    Console.WriteLine("I update the new Language");
+        //}
 
         [When(@"I click on dropdown to update the new Language")]
         public void WhenIClickOnDropdownToUpdateTheNewLanguage()
