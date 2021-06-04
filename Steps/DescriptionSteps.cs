@@ -2,11 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.IE;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace Marc.Steps
@@ -23,7 +19,6 @@ namespace Marc.Steps
         public DescriptionSteps()
         {
             driver = new ChromeDriver();
-           // driver = new InternetExplorerDriver();
             loginPage = new LoginPage(driver);
             descriptionPage = new DescriptionPage(driver);
 

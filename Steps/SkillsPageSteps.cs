@@ -2,11 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.IE;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace Marc.Steps
@@ -23,8 +19,8 @@ namespace Marc.Steps
 
         public SkillsPageSteps()
         {
-              driver = new ChromeDriver();
-          //  driver = new InternetExplorerDriver();
+             driver = new ChromeDriver();
+            
             loginPage = new LoginPage(driver);
             skillsPage = new SkillsPage(driver);
 
@@ -65,6 +61,7 @@ namespace Marc.Steps
             Console.WriteLine("I click the add new skills button");
         }
 
+       
 
         [When(@"I enter the new (.*)")]
         public void WhenIEnterTheNew(string skills)
@@ -126,13 +123,6 @@ namespace Marc.Steps
             Console.WriteLine("I update the new skills");
         }
 
-
-        //[When(@"I update the new skills")]
-        //public void WhenIUpdateTheNewSkills()
-        //{
-        //    skillsPage.iUpdateNewSkills();
-        //    Console.WriteLine("I update the new skills");
-        //}
 
         [When(@"I click on dropdown to update the new skills")]
         public void WhenIClickOnDropdownToUpdateTheNewSkills()

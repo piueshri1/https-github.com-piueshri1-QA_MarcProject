@@ -1,9 +1,6 @@
 ﻿using Marc.utilities;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
 
 namespace Marc.pages
 {
@@ -27,7 +24,12 @@ namespace Marc.pages
         private IWebElement availabilityTymeCancel => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i"));
         private IWebElement availabilityTarget => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > select"));
         private IWebElement availabilityToEarn => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > select > option:nth-child(4)"));
-       
+        private IWebElement availTimeAdd => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span"));
+        private IWebElement hoursTimeAdded => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span"));
+        private IWebElement earnTargetAdded => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span"));
+
+
+
         public ProfilePage(IWebDriver driver)
         {
             this.driver = driver;
@@ -55,7 +57,7 @@ namespace Marc.pages
       
 
             // validate profile is save.......
-            Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.title", 8);
+            Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.title",5);
             if (validateProfileSave.Text == "Piue Shri")
             {
                 Console.WriteLine(" profile edded successfully ");
@@ -67,7 +69,7 @@ namespace Marc.pages
             }
 
             // select availability time....
-            Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i", 2);
+            Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i", 5);
             availability.Click();
             availabilityType.Click();
              
@@ -76,7 +78,7 @@ namespace Marc.pages
 
 
             // select working hours.......
-            Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span > i", 2);
+            Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span > i", 5);
             workinHour.Click();
             dwopDownForWorkingHours.Click();
           
@@ -138,6 +140,75 @@ namespace Marc.pages
 
         }
 
+
+        public void iClickOnAvailabilityIcon()
+        {
+            Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i", 5);
+
+            availability.Click();
+
+        }
+
+        public void iClickOnDropdown()
+        {
+            availabilityType.Click();
+        }
+
+        public void iSelectAvailabilityFromDropdown()
+        {
+            selecteAvailabilityTime.Click();
+        }
+
+       public bool validateThatAvailabilityAdded()
+        {
+            return availTimeAdd.Displayed;
+        }
+
+        public void iClickOnHoursIcon()
+        {
+            Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span > i", 5);
+
+            workinHour.Click();
+        }
+
+        public void iClickOnHoursDropdown()
+        {
+            dwopDownForWorkingHours.Click();
+
+            
+        }
+        public void iSelectHoursFromDropdown()
+        {
+            selectedWorkinHours.Click();
+        }
+
+        public bool validateThatHoursAdded()
+        {
+            return hoursTimeAdded.Displayed;
+        }
+
+        public void iClickOnEarnTargetIcon()
+        {
+            Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > i", 2);
+
+            earnTaget.Click();
+        }
+
+       public void iClickOnEarnDropdown()
+        {
+            availabilityTarget.Click();
+
+           
+        }
+        public void iSelectEarnTargetFromDropdown()
+        {
+            availabilityToEarn.Click();
+        }
+
+        public bool validateThatEarnTargetAdded()
+        {
+            return earnTargetAdded.Displayed;
+        }
 
         //// method for enter profile  first name and last name using selenium with BDD specflow .......
         //public void enterFirstNameAndLastName(string FirstNameValue,string LastNameValue)

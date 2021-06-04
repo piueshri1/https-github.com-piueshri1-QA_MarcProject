@@ -2,9 +2,6 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
 
 namespace Marc.pages
 {
@@ -41,7 +38,7 @@ namespace Marc.pages
       
             try
             {
-                Wait.ElementExist(driver, "CssSelector", "#home > div > div > div.ui.secondary.menu.inverted > div > a", 5);
+                Wait.ElementExist(driver, "CssSelector", "#home > div > div > div.ui.secondary.menu.inverted > div > a", 3);
                 // click on signIn link
            
                 signInLink.Click();
@@ -73,19 +70,17 @@ namespace Marc.pages
             // verify login successfully
 
 
-            Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > div.ui.secondary.menu > a", 2);
+            Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > div.ui.secondary.menu > a", 3);
             if (marcLogo.Text == "Mars Logo")
-
             {
-              //  Assert.Pass("login pass ,test pass");
+                //  Assert.Pass("login pass test pass");
                  Console.WriteLine("login pass ,test pass");
             }
 
             else
-
             {
                 Console.WriteLine("login fail,test fail");
-               // Assert.Fail("login fail,test fail");
+                 // Assert.Fail("login fail test fail");
 
             }
           

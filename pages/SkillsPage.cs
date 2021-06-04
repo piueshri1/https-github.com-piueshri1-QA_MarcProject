@@ -1,10 +1,6 @@
 ﻿using Marc.utilities;
-using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+
 
 namespace Marc.pages
 {
@@ -26,7 +22,8 @@ namespace Marc.pages
         private IWebElement clickUpdateSkillsButton => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody > tr > td > div > span > input.ui.teal.button"));
         private IWebElement deleteEditedSkills => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody:nth-child(2) > tr > td.right.aligned > span:nth-child(2) > i"));
         private IWebElement iAmAtSkillsIcons => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div > div.twelve.wide.column.scrollTable > div > table > tbody > tr > td.right.aligned > span:nth-child(1) > i"));
-        
+        private IWebElement add => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.active.tooltip-target > div > div.twelve.wide.column.scrollTable > div > div > div.six.wide.field > input.ui.teal.button"));
+        private IWebElement cancel => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.active.tooltip-target > div > div.twelve.wide.column.scrollTable > div > div > div.six.wide.field > input:nth-child(2)"));
 
 
         public SkillsPage(IWebDriver driver)
@@ -46,31 +43,20 @@ namespace Marc.pages
 
             // add skills
             addNewSkills.Click();
-           
-
-
+          
             // edit new sckills
             editNewSkills.SendKeys("softwareTesting");
            
-
-
-
             // dropdon fo select skills
             cselectSkillsDropDown.Click();
 
             // dropdon fo selected skills
             selectedSkills.Click();
-        
-
+       
             // add selected skills
 
             addSelectedSkills.Click();
-     
-
-
-
-
-
+    
         }
 
         public void UpdateSkills()
@@ -239,6 +225,8 @@ namespace Marc.pages
             deleteEditedSkills.Click();
           
         }
+
+      
 
 
     }

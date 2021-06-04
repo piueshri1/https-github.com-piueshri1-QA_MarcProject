@@ -2,11 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.IE;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace Marc.Steps
@@ -25,7 +21,6 @@ namespace Marc.Steps
         public ProfilePageSteps()
         {
              driver = new ChromeDriver();
-          //  driver = new InternetExplorerDriver();
             loginPage = new LoginPage(driver);
             profilePage = new ProfilePage(driver);
             
@@ -89,6 +84,99 @@ namespace Marc.Steps
             Console.WriteLine("Validate that profile  is added");
             Assert.IsTrue(isEditted);
         }
+
+        [When(@"I click on availability icon")]
+        public void WhenIClickOnAvailabilityIcon()
+        {
+            profilePage.iClickOnAvailabilityIcon();
+            Console.WriteLine("I click on availability icon");
+        }
+
+        [When(@"I click on dropdown")]
+        public void WhenIClickOnDropdown()
+        {
+            profilePage.iClickOnDropdown();
+            Console.WriteLine("I click on dropdown");
+        }
+
+        [When(@"I select availability from dropdown")]
+        public void WhenISelectAvailabilityFromDropdown()
+        {
+            profilePage.iSelectAvailabilityFromDropdown();
+            Console.WriteLine("I select availability from dropdown");
+        }
+
+        [Then(@"Validate that availability added")]
+        public void ThenValidateThatAvailabilityAdded()
+        {
+          bool isAvailAdd =  profilePage.validateThatAvailabilityAdded();
+            Console.WriteLine("Validate that availability added");
+            Assert.IsTrue(isAvailAdd);
+        }
+
+        [When(@"I click on hours icon")]
+        public void WhenIClickOnHoursIcon()
+        {
+            profilePage.iClickOnHoursIcon();
+            Console.WriteLine("I click on hours icon");
+        }
+
+
+        [When(@"I click on hours dropdown")]
+        public void WhenIClickOnHoursDropdown()
+        {
+            profilePage.iClickOnHoursDropdown();
+            Console.WriteLine("I click on hours dropdown");
+        }
+
+     
+
+        [When(@"I select hours from dropdown")]
+        public void WhenISelectHoursFromDropdown()
+        {
+            profilePage.iSelectHoursFromDropdown();
+            Console.WriteLine("I select hours from dropdown");
+        }
+
+        [Then(@"Validate that hours added")]
+        public void ThenValidateThatHoursAdded()
+        {
+            bool isHoursAdded = profilePage.validateThatHoursAdded();
+            Console.WriteLine("Validate that hours added");
+            Assert.IsTrue(isHoursAdded);
+        }
+
+        [When(@"I click on earn target icon")]
+        public void WhenIClickOnEarnTargetIcon()
+        {
+            profilePage.iClickOnEarnTargetIcon();
+            Console.WriteLine("I click on earn target icon");
+        }
+
+
+        [When(@"I click on earn dropdown")]
+        public void WhenIClickOnEarnDropdown()
+        {
+            profilePage.iClickOnEarnDropdown();
+            Console.WriteLine("I click on earn dropdown");
+        }
+
+
+        [When(@"I select earn target from dropdown")]
+        public void WhenISelectEarnTargetFromDropdown()
+        {
+            profilePage.iSelectEarnTargetFromDropdown();
+            Console.WriteLine("I select earn target from dropdown");
+        }
+
+        [Then(@"Validate that earn target added")]
+        public void ThenValidateThatEarnTargetAdded()
+        {
+            bool isEarnAdd = profilePage.validateThatEarnTargetAdded();
+            Console.WriteLine("Validate that earn target added");
+            Assert.IsTrue(isEarnAdd);
+        }
+
 
     }
 }

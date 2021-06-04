@@ -17,9 +17,6 @@ Scenario: I am able to add new skills
 	| Skills      |
 	| C#,Selenium |
 
-	
-
-
 	@mytag
 Scenario: I am able to update skills
 	Given I login

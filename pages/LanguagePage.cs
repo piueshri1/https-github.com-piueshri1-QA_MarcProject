@@ -1,10 +1,7 @@
 ﻿using Marc.utilities;
-using NUnit.Framework;
+
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+
 
 namespace Marc.pages
 {
