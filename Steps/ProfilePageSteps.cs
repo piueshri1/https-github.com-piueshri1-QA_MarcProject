@@ -36,7 +36,7 @@ namespace Marc.Steps
         [Given(@"I am logged in")]
         public void GivenIAmLoggedIn()
         {
-            loginPage.iAmLogedIn(null,null);
+            loginPage.IAmLogedIn(null,null);
             Console.WriteLine("I am logged in");
         }
 
@@ -73,7 +73,7 @@ namespace Marc.Steps
         [When(@"I click the save button")]
         public void WhenIClickTheSaveButton()
         {
-            profilePage.iClickTheSaveButton();
+            profilePage.IClickTheSaveButton();
             Console.WriteLine("I click the save button");
         }
 
@@ -88,28 +88,28 @@ namespace Marc.Steps
         [When(@"I click on availability icon")]
         public void WhenIClickOnAvailabilityIcon()
         {
-            profilePage.iClickOnAvailabilityIcon();
+            profilePage.IClickOnAvailabilityIcon();
             Console.WriteLine("I click on availability icon");
         }
 
         [When(@"I click on dropdown")]
         public void WhenIClickOnDropdown()
         {
-            profilePage.iClickOnDropdown();
+            profilePage.IClickOnDropdown();
             Console.WriteLine("I click on dropdown");
         }
 
         [When(@"I select availability from dropdown")]
         public void WhenISelectAvailabilityFromDropdown()
         {
-            profilePage.iSelectAvailabilityFromDropdown();
+            profilePage.ISelectAvailabilityFromDropdown();
             Console.WriteLine("I select availability from dropdown");
         }
 
         [Then(@"Validate that availability added")]
         public void ThenValidateThatAvailabilityAdded()
         {
-          bool isAvailAdd =  profilePage.validateThatAvailabilityAdded();
+          bool isAvailAdd =  profilePage.ValidateThatAvailabilityAdded();
             Console.WriteLine("Validate that availability added");
             Assert.IsTrue(isAvailAdd);
         }
@@ -117,7 +117,7 @@ namespace Marc.Steps
         [When(@"I click on hours icon")]
         public void WhenIClickOnHoursIcon()
         {
-            profilePage.iClickOnHoursIcon();
+            profilePage.IClickOnHoursIcon();
             Console.WriteLine("I click on hours icon");
         }
 
@@ -125,7 +125,7 @@ namespace Marc.Steps
         [When(@"I click on hours dropdown")]
         public void WhenIClickOnHoursDropdown()
         {
-            profilePage.iClickOnHoursDropdown();
+            profilePage.IClickOnHoursDropdown();
             Console.WriteLine("I click on hours dropdown");
         }
 
@@ -134,14 +134,14 @@ namespace Marc.Steps
         [When(@"I select hours from dropdown")]
         public void WhenISelectHoursFromDropdown()
         {
-            profilePage.iSelectHoursFromDropdown();
+            profilePage.ISelectHoursFromDropdown();
             Console.WriteLine("I select hours from dropdown");
         }
 
         [Then(@"Validate that hours added")]
         public void ThenValidateThatHoursAdded()
         {
-            bool isHoursAdded = profilePage.validateThatHoursAdded();
+            bool isHoursAdded = profilePage.ValidateThatHoursAdded();
             Console.WriteLine("Validate that hours added");
             Assert.IsTrue(isHoursAdded);
         }
@@ -149,7 +149,7 @@ namespace Marc.Steps
         [When(@"I click on earn target icon")]
         public void WhenIClickOnEarnTargetIcon()
         {
-            profilePage.iClickOnEarnTargetIcon();
+            profilePage.IClickOnEarnTargetIcon();
             Console.WriteLine("I click on earn target icon");
         }
 
@@ -157,7 +157,7 @@ namespace Marc.Steps
         [When(@"I click on earn dropdown")]
         public void WhenIClickOnEarnDropdown()
         {
-            profilePage.iClickOnEarnDropdown();
+            profilePage.IClickOnEarnDropdown();
             Console.WriteLine("I click on earn dropdown");
         }
 
@@ -165,14 +165,14 @@ namespace Marc.Steps
         [When(@"I select earn target from dropdown")]
         public void WhenISelectEarnTargetFromDropdown()
         {
-            profilePage.iSelectEarnTargetFromDropdown();
+            profilePage.ISelectEarnTargetFromDropdown();
             Console.WriteLine("I select earn target from dropdown");
         }
 
         [Then(@"Validate that earn target added")]
         public void ThenValidateThatEarnTargetAdded()
         {
-            bool isEarnAdd = profilePage.validateThatEarnTargetAdded();
+            bool isEarnAdd = profilePage.ValidateThatEarnTargetAdded();
             Console.WriteLine("Validate that earn target added");
             Assert.IsTrue(isEarnAdd);
         }

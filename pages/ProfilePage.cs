@@ -8,25 +8,25 @@ namespace Marc.pages
     {
 
         private IWebDriver driver;
-        private IWebElement onClickProfileName => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.title > i"));
-        private IWebElement editFirstName => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.content.active > div > div.field > input[type=text]:nth-child(2)"));
-        private IWebElement editLastName => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.content.active > div > div.field > input[type=text]:nth-child(4)"));
-        private IWebElement saveEdittedProfile => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.content.active > div > div:nth-child(2) > button"));
-        private IWebElement validateProfileSave => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.title"));
-        private IWebElement clickPofile => driver.FindElement(By.CssSelector("#account-profile-section > div > section.nav-secondary > div > a:nth-child(2)"));
-        private IWebElement availability => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i"));
-        private IWebElement selecteAvailabilityTime => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > select > option:nth-child(3)"));
-        private IWebElement workinHour => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span > i"));
-        private IWebElement dwopDownForWorkingHours => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span > select"));
-        private IWebElement selectedWorkinHours => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span"));
-        private IWebElement  earnTaget => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > i"));
-        private IWebElement availabilityType => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > select"));
-        private IWebElement availabilityTymeCancel => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i"));
-        private IWebElement availabilityTarget => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > select"));
-        private IWebElement availabilityToEarn => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > select > option:nth-child(4)"));
-        private IWebElement availTimeAdd => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span"));
-        private IWebElement hoursTimeAdded => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span"));
-        private IWebElement earnTargetAdded => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span"));
+        private IWebElement OnClickProfileName => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.title > i"));
+        private IWebElement EditFirstName => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.content.active > div > div.field > input[type=text]:nth-child(2)"));
+        private IWebElement EditLastName => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.content.active > div > div.field > input[type=text]:nth-child(4)"));
+        private IWebElement SaveEdittedProfile => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.content.active > div > div:nth-child(2) > button"));
+        private IWebElement ValidateProfileSave => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.title"));
+        private IWebElement ClickPofile => driver.FindElement(By.CssSelector("#account-profile-section > div > section.nav-secondary > div > a:nth-child(2)"));
+        private IWebElement Availability => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i"));
+        private IWebElement SelecteAvailabilityTime => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > select > option:nth-child(3)"));
+        private IWebElement WorkinHour => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span > i"));
+        private IWebElement DwopDownForWorkingHours => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span > select"));
+        private IWebElement SelectedWorkinHours => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span"));
+        private IWebElement  EarnTaget => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > i"));
+        private IWebElement AvailabilityType => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > select"));
+      //  private IWebElement AvailabilityTymeCancel => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i"));
+        private IWebElement AvailabilityTarget => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > select"));
+        private IWebElement AvailabilityToEarn => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > select > option:nth-child(4)"));
+        private IWebElement AvailTimeAdd => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span"));
+        private IWebElement HoursTimeAdded => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span"));
+        private IWebElement EarnTargetAdded => driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span"));
 
 
 
@@ -39,26 +39,26 @@ namespace Marc.pages
         {
             Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.title > i", 5);
             // click on profile name.....
-            onClickProfileName.Click();
+            OnClickProfileName.Click();
           
 
 
             // enter first name......
             Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.content.active > div > div.field > input[type=text]:nth-child(2)", 2);
-            editFirstName.Clear();
-            editFirstName.SendKeys("piue@");
+            EditFirstName.Clear();
+            EditFirstName.SendKeys("piue@");
 
             // enter last name.......
-            editLastName.Clear();
-            editLastName.SendKeys("shri@");
+            EditLastName.Clear();
+            EditLastName.SendKeys("shri@");
 
             // on click save button......
-            saveEdittedProfile.Click();
+            SaveEdittedProfile.Click();
       
 
             // validate profile is save.......
             Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.title",5);
-            if (validateProfileSave.Text == "Piue Shri")
+            if (ValidateProfileSave.Text == "Piue Shri")
             {
                 Console.WriteLine(" profile edded successfully ");
             }
@@ -70,28 +70,28 @@ namespace Marc.pages
 
             // select availability time....
             Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i", 5);
-            availability.Click();
-            availabilityType.Click();
+            Availability.Click();
+            AvailabilityType.Click();
              
-            selecteAvailabilityTime.Click();
+            SelecteAvailabilityTime.Click();
 
 
 
             // select working hours.......
             Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span > i", 5);
-            workinHour.Click();
-            dwopDownForWorkingHours.Click();
+            WorkinHour.Click();
+            DwopDownForWorkingHours.Click();
           
-            selectedWorkinHours.Click();
+            SelectedWorkinHours.Click();
 
 
 
             // select earnig target.....
             Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > i", 2);
-            earnTaget.Click();
-            availabilityTarget.Click();
+            EarnTaget.Click();
+            AvailabilityTarget.Click();
           
-            availabilityToEarn.Click();
+            AvailabilityToEarn.Click();
          
 
         }
@@ -101,14 +101,14 @@ namespace Marc.pages
         public void IAmAtProfilePage()
         {
             Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section.nav-secondary > div > a:nth-child(2)", 5);
-            clickPofile.Click();
+            ClickPofile.Click();
            
         }
 
         // method for click on profile name using selenium with BDD specflow .......
         public void IclickOnProfileName()
         {
-            onClickProfileName.Click();
+            OnClickProfileName.Click();
            
         }
 
@@ -118,113 +118,105 @@ namespace Marc.pages
             Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.content.active > div > div.field > input[type=text]:nth-child(2)", 5);
 
             // enter first name......
-            editFirstName.Clear();
-            editFirstName.SendKeys(FirstNmaeValue);
+            EditFirstName.Clear();
+            EditFirstName.SendKeys(FirstNmaeValue);
 
         }
 
         // method for enter profile last name using selenium with BDD specflow .......
         public void EnterLastName(string LastNameValue)
         {
-            editLastName.Clear();
-            editLastName.SendKeys(LastNameValue);
+            EditLastName.Clear();
+            EditLastName.SendKeys(LastNameValue);
 
         }
 
         // method for save edited profile name using selenium with BDD specflow .......
-        public void iClickTheSaveButton()
+        public void IClickTheSaveButton()
         {
             // on click save button......
-            saveEdittedProfile.Click();
+            SaveEdittedProfile.Click();
           
 
         }
 
 
-        public void iClickOnAvailabilityIcon()
+        public void IClickOnAvailabilityIcon()
         {
             Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(2) > div > span > i", 5);
 
-            availability.Click();
+            Availability.Click();
 
         }
 
-        public void iClickOnDropdown()
+        public void IClickOnDropdown()
         {
-            availabilityType.Click();
+            AvailabilityType.Click();
         }
 
-        public void iSelectAvailabilityFromDropdown()
+        public void ISelectAvailabilityFromDropdown()
         {
-            selecteAvailabilityTime.Click();
+            SelecteAvailabilityTime.Click();
         }
 
-       public bool validateThatAvailabilityAdded()
+       public bool ValidateThatAvailabilityAdded()
         {
-            return availTimeAdd.Displayed;
+            return AvailTimeAdd.Displayed;
         }
 
-        public void iClickOnHoursIcon()
+        public void IClickOnHoursIcon()
         {
             Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(3) > div > span > i", 5);
 
-            workinHour.Click();
+            WorkinHour.Click();
         }
 
-        public void iClickOnHoursDropdown()
+        public void IClickOnHoursDropdown()
         {
-            dwopDownForWorkingHours.Click();
+            DwopDownForWorkingHours.Click();
 
             
         }
-        public void iSelectHoursFromDropdown()
+        public void ISelectHoursFromDropdown()
         {
-            selectedWorkinHours.Click();
+            SelectedWorkinHours.Click();
         }
 
-        public bool validateThatHoursAdded()
+        public bool ValidateThatHoursAdded()
         {
-            return hoursTimeAdded.Displayed;
+            return HoursTimeAdded.Displayed;
         }
 
-        public void iClickOnEarnTargetIcon()
+        public void IClickOnEarnTargetIcon()
         {
             Wait.ElementToBeClickable(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div.extra.content > div > div:nth-child(4) > div > span > i", 2);
 
-            earnTaget.Click();
+            EarnTaget.Click();
         }
 
-       public void iClickOnEarnDropdown()
+       public void IClickOnEarnDropdown()
         {
-            availabilityTarget.Click();
+            AvailabilityTarget.Click();
 
            
         }
-        public void iSelectEarnTargetFromDropdown()
+        public void ISelectEarnTargetFromDropdown()
         {
-            availabilityToEarn.Click();
+            AvailabilityToEarn.Click();
         }
 
-        public bool validateThatEarnTargetAdded()
+        public bool ValidateThatEarnTargetAdded()
         {
-            return earnTargetAdded.Displayed;
+            return EarnTargetAdded.Displayed;
         }
 
-        //// method for enter profile  first name and last name using selenium with BDD specflow .......
-        //public void enterFirstNameAndLastName(string FirstNameValue,string LastNameValue)
-        //{
-        //    editFirstName.SendKeys(FirstNameValue);
-        //    editLastName.SendKeys(LastNameValue);
-
-        //}
-
-
+     
         // method for validate profile first name and last name added successfully using selenium with BDD specflow .......
         public bool ValidateProfileIsEdited()
         {
             Wait.ElementExist(driver, "CssSelector", "#account-profile-section > div > section:nth-child(3) > div > div > div > div.four.wide.column > div > div > div > div > div > div:nth-child(2) > div > div > div.title", 5);
 
-            return validateProfileSave.Displayed;
+            return ValidateProfileSave.Displayed;
         }
       
     }

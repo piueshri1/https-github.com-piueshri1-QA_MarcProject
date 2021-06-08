@@ -10,11 +10,10 @@ Scenario: I am able to edit new profile details
 	And I enter new lastname < LastName >
 	When I click the save button
 	Then Validate that profile  is added
-	
 
 	Examples: 
-	| FirstName |  LastName |
-	| piue@0    |  shri@0   |
+	|FirstName|  LastName |
+	| piue@   |  shri@  |
 
 @mytag
 Scenario: I am able to edit availability..

@@ -4,16 +4,10 @@
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Steps\LanguagePageSteps.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Steps\LoginPageSteps.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Steps\ProfilePageSteps.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Steps\SkillsPageSteps.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

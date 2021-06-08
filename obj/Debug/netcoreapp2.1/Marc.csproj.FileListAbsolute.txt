@@ -1,3 +1,6 @@
+C:\testingProject\Marc\Marc\obj\Debug\netcoreapp2.1\Marc.AssemblyInfoInputs.cache
+C:\testingProject\Marc\Marc\obj\Debug\netcoreapp2.1\Marc.AssemblyInfo.cs
+C:\testingProject\Marc\Marc\obj\Debug\netcoreapp2.1\Marc.csproj.CoreCompileInputs.cache
 C:\testingProject\Marc\Marc\bin\Debug\netcoreapp2.1\testhost.exe
 C:\testingProject\Marc\Marc\bin\Debug\netcoreapp2.1\testhost.dll
 C:\testingProject\Marc\Marc\bin\Debug\netcoreapp2.1\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -12,9 +15,6 @@ C:\testingProject\Marc\Marc\bin\Debug\netcoreapp2.1\Marc.runtimeconfig.json
 C:\testingProject\Marc\Marc\bin\Debug\netcoreapp2.1\Marc.runtimeconfig.dev.json
 C:\testingProject\Marc\Marc\bin\Debug\netcoreapp2.1\Marc.dll
 C:\testingProject\Marc\Marc\bin\Debug\netcoreapp2.1\Marc.pdb
-C:\testingProject\Marc\Marc\obj\Debug\netcoreapp2.1\Marc.AssemblyInfoInputs.cache
-C:\testingProject\Marc\Marc\obj\Debug\netcoreapp2.1\Marc.AssemblyInfo.cs
-C:\testingProject\Marc\Marc\obj\Debug\netcoreapp2.1\Marc.csproj.CoreCompileInputs.cache
 C:\testingProject\Marc\Marc\obj\Debug\netcoreapp2.1\Marc.dll
 C:\testingProject\Marc\Marc\obj\Debug\netcoreapp2.1\Marc.pdb
 C:\testingProject\Marc\Marc\obj\Debug\netcoreapp2.1\Marc.genruntimeconfig.cache

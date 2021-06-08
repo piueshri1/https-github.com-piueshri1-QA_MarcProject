@@ -31,7 +31,7 @@ namespace Marc.Steps
         {
 
            // LoginPage loginPage = new LoginPage();
-            loginPage.navigateToLoginPage();
+            loginPage.NavigateToLoginPage();
             Console.WriteLine("I lunch the application");
         }
 
@@ -40,7 +40,7 @@ namespace Marc.Steps
         {
 
           //  LoginPage loginPage = new LoginPage();
-            loginPage.clickSignLink();
+            loginPage.ClickSignLink();
             Console.WriteLine("I click the signin  link");
         }
 
@@ -49,7 +49,7 @@ namespace Marc.Steps
         {
 
          //   LoginPage loginPage = new LoginPage();
-           bool isAtLoginPage = loginPage.validateYouAreAtLoginPage();
+           bool isAtLoginPage = loginPage.ValidateYouAreAtLoginPage();
             Assert.IsTrue(isAtLoginPage);
         }
 
@@ -58,7 +58,7 @@ namespace Marc.Steps
         public void WhenIEnterValidCred()
         {
          //   LoginPage loginPage = new LoginPage();
-            loginPage.enterEmailIdAndPasswordRefactor( null, null);
+            loginPage.EnterEmailIdAndPasswordRefactor( null, null);
             Console.WriteLine("I enter valid Cred");
         }
 
@@ -66,7 +66,7 @@ namespace Marc.Steps
         public void WhenIClickTheLoginButton()
         {
            // LoginPage loginPage = new LoginPage();
-            loginPage.clickLoginButton();
+            loginPage.ClickLoginButton();
             Console.WriteLine("I click the login button");
         }
 
@@ -74,7 +74,7 @@ namespace Marc.Steps
         public void WhenILoginWithUsername(string emailId)
         {
            // LoginPage loginPage = new LoginPage();
-            loginPage.enterEmailIdAndPasswordRefactor( emailId,null);
+            loginPage.EnterEmailIdAndPasswordRefactor( emailId,null);
             Console.WriteLine("I login with username = "+ emailId);
         }
 
@@ -82,7 +82,7 @@ namespace Marc.Steps
         public void WhenILoginWithAndWith(string emailId, string password)
         {
         //    LoginPage logiinPage = new LoginPage();
-            loginPage.enterEmailIdAndPasswordRefactor(emailId, password);
+            loginPage.EnterEmailIdAndPasswordRefactor(emailId, password);
              Console.WriteLine("I login with username = " + emailId + " and with password = "+ password);        }
 
 
@@ -90,7 +90,7 @@ namespace Marc.Steps
         public void ThenIShouldBeNotLogin()
         {
           //  LoginPage loginPage = new LoginPage();
-            bool isNotLogin = loginPage.validateNotLoginSuccessfuly();
+            bool isNotLogin = loginPage.ValidateNotLoginSuccessfuly();
             Console.WriteLine("I should be not login");
             Assert.IsTrue(isNotLogin);
         }
@@ -100,7 +100,7 @@ namespace Marc.Steps
         public void ThenIShoulBeAbleToLoginSuccessfully()
         {
           //  LoginPage logiinPage = new LoginPage();
-          bool isLogin =  loginPage.validateLoginSuccessfully();
+          bool isLogin =  loginPage.ValidateLoginSuccessfully();
             Console.WriteLine("I shoul be able to login successfully");
             Assert.IsTrue(isLogin);
         }
